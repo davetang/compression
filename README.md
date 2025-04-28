@@ -30,3 +30,17 @@ Method: tar.bz2
   Run 3: 15.759382235 seconds, size: 66MiB
 Done
 ```
+
+## Full FASTQ
+
+Extract.
+
+```console
+unpigz -c data/ERR031940_1.filt.fastq.gz > data/ERR031940_1.filt.fastq
+```
+
+Compression time and size on the full FASTQ file.
+
+```console
+./bin/compress.sh ERR031940_1.filt.fastq > ERR031940_1.filt.txt
+```
