@@ -44,3 +44,27 @@ Compression time and size on the full FASTQ file.
 ```console
 ./bin/compress.sh ERR031940_1.filt.fastq > ERR031940_1.filt.txt
 ```
+```
+Timing compression for ERR031940_1.filt.fastq
+Method: tar.gz
+Method: tar.xz
+Method: tar.bz2
+Done
+```
+
+Results.
+
+```console
+cat ERR031940_1.filt.txt
+```
+```
+  Run 1: 1324.644394870 seconds, size: 4.4GiB
+  Run 2: 1326.044701334 seconds, size: 4.4GiB
+  Run 3: 1326.556338882 seconds, size: 4.4GiB
+  Run 1: 8927.845167730 seconds, size: 3.6GiB
+  Run 2: 8865.651998759 seconds, size: 3.6GiB
+  Run 3: 8836.845128935 seconds, size: 3.6GiB
+  Run 1: 856.985312803 seconds, size: 3.6GiB
+  Run 2: 855.498427229 seconds, size: 3.6GiB
+  Run 3: 878.457609050 seconds, size: 3.6GiB
+```
