@@ -6,7 +6,7 @@ Download some data from my server.
 ./bin/download.sh
 ```
 
-## gz versus xz
+## gz, xz, and bz2
 
 Compression time and size.
 
@@ -14,15 +14,19 @@ Compression time and size.
 ./bin/compress.sh
 ```
 ```
-Creating test.fq
+Creating test.fq: 4000000 lines
 Timing compression for test.fq
 Method: tar.gz
-  Run 1: 2.395504678 seconds, size: 8.1MiB
-  Run 2: 2.406918665 seconds, size: 8.1MiB
-  Run 3: 2.440442703 seconds, size: 8.1MiB
+  Run 1: 25.079455715 seconds, size: 82MiB
+  Run 2: 23.972182620 seconds, size: 82MiB
+  Run 3: 23.963727669 seconds, size: 82MiB
 Method: tar.xz
-  Run 1: 15.346361435 seconds, size: 6.6MiB
-  Run 2: 15.363561849 seconds, size: 6.6MiB
-  Run 3: 15.453362495 seconds, size: 6.6MiB
+  Run 1: 163.365216818 seconds, size: 67MiB
+  Run 2: 162.730457104 seconds, size: 67MiB
+  Run 3: 163.296625634 seconds, size: 67MiB
+Method: tar.bz2
+  Run 1: 15.765786194 seconds, size: 66MiB
+  Run 2: 15.433430940 seconds, size: 66MiB
+  Run 3: 15.759382235 seconds, size: 66MiB
 Done
 ```

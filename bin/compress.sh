@@ -8,13 +8,13 @@ DATADIR=${ROOTDIR}/data
 INPUT_FILE=test.fq
 BASENAME=$(basename "$INPUT_FILE")
 DIRNAME=$(dirname "$INPUT_FILE")
-LINES=400000
+LINES=4000000
 
->&2 echo "Creating ${INPUT_FILE}"
+>&2 echo "Creating ${INPUT_FILE}: ${LINES} lines"
 zcat ${DATADIR}/ERR031940_1.filt.fastq.gz | head -n ${LINES} > ${DATADIR}/${INPUT_FILE} || [ $? -eq 141 ]
 
 >&2 echo "Timing compression for ${INPUT_FILE}"
-for METHOD in gz xz; do
+for METHOD in gz xz bz2; do
    cd ${DATADIR}
    >&2 echo "Method: tar.${METHOD}"
    for i in {1..3}; do
@@ -23,8 +23,13 @@ for METHOD in gz xz; do
 
       if [[ "${METHOD}" == "gz" ]]; then
          tar -czf "${ARCHIVE}" "${INPUT_FILE}"
-      else
+      elif [[ "${METHOD}" == "xz" ]]; then
          tar -cJf "${ARCHIVE}" "${INPUT_FILE}"
+      elif [[ "${METHOD}" == "bz2" ]]; then
+         tar -cjf "${ARCHIVE}" "${INPUT_FILE}"
+      else
+         >&2 echo Unexpected method
+         exit 1
       fi
 
       END=$(date +%s.%N)
