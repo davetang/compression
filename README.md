@@ -107,3 +107,22 @@ Decompression time: 46.447133097 seconds
 md5sum: a9f832ad1569040426e356d7b6fb9d3e  /data/github/compression/data/ERR031940_1.filt.fastq.decompressed
 Done
 ```
+
+[lz4](https://github.com/lz4/lz4) is, as advertised, an Extremely Fast Compression algorithm.
+
+```console
+./bin/lz4.sh
+```
+```
+Original size: 13G      /data/github/compression/data/ERR031940_1.filt.fastq
+md5sum: a9f832ad1569040426e356d7b6fb9d3e  /data/github/compression/data/ERR031940_1.filt.fastq
+Compressing...
+Compressed filename will be : /data/github/compression/data/ERR031940_1.filt.fastq.lz4
+Compressed 13657773290 bytes into 7553203735 bytes ==> 55.30%
+Compressed size: 7.1G   /data/github/compression/data/ERR031940_1.filt.fastq.lz4
+Compression time: 42.638390512 seconds
+Decompressing...
+Decompression time: 18.756130262 seconds
+md5sum: a9f832ad1569040426e356d7b6fb9d3e  /data/github/compression/data/ERR031940_1.filt.fastq.decompressed
+Done
+```
