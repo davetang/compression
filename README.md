@@ -90,3 +90,20 @@ Method: tar.bz2
   Run 3: 397.138759535 seconds
 Done
 ```
+
+[Zstandard](https://github.com/facebook/zstd).
+
+```console
+./bin/zstd.sh
+```
+```
+Original size: 13G      /data/github/compression/data/ERR031940_1.filt.fastq
+md5sum: a9f832ad1569040426e356d7b6fb9d3e  /data/github/compression/data/ERR031940_1.filt.fastq
+Compressing...
+Compressed size: 4.5G   /data/github/compression/data/ERR031940_1.filt.fastq.zst
+Compression time: 81.590140039 seconds
+Decompressing...
+Decompression time: 46.447133097 seconds
+md5sum: a9f832ad1569040426e356d7b6fb9d3e  /data/github/compression/data/ERR031940_1.filt.fastq.decompressed
+Done
+```
