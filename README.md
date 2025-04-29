@@ -68,3 +68,21 @@ cat ERR031940_1.filt.txt
   Run 2: 855.498427229 seconds, size: 3.6GiB
   Run 3: 878.457609050 seconds, size: 3.6GiB
 ```
+
+Extraction time on different compressions.
+
+```console
+./bin/extract.sh ERR031940_1.filt.fastq > extract_time.txt
+```
+```
+cat extract_time.txt
+  Run 1: 86.362004629 seconds
+  Run 2: 85.053675636 seconds
+  Run 3: 124.804602347 seconds
+  Run 1: 228.531461077 seconds
+  Run 2: 225.038016185 seconds
+  Run 3: 226.399791213 seconds
+  Run 1: 403.471076386 seconds
+  Run 2: 412.216277255 seconds
+  Run 3: 426.521298160 seconds
+```
