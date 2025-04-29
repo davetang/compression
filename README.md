@@ -72,17 +72,21 @@ cat ERR031940_1.filt.txt
 Extraction time on different compressions.
 
 ```console
-./bin/extract.sh ERR031940_1.filt.fastq > extract_time.txt
+./bin/extract.sh ERR031940_1.filt.fastq
 ```
 ```
-cat extract_time.txt
-  Run 1: 86.362004629 seconds
-  Run 2: 85.053675636 seconds
-  Run 3: 124.804602347 seconds
-  Run 1: 228.531461077 seconds
-  Run 2: 225.038016185 seconds
-  Run 3: 226.399791213 seconds
-  Run 1: 403.471076386 seconds
-  Run 2: 412.216277255 seconds
-  Run 3: 426.521298160 seconds
+Timing extraction
+Method: tar.gz
+  Run 1: 78.395756227 seconds
+  Run 2: 78.829205738 seconds
+  Run 3: 78.898753542 seconds
+Method: tar.xz
+  Run 1: 216.682740982 seconds
+  Run 2: 219.028032811 seconds
+  Run 3: 216.031525513 seconds
+Method: tar.bz2
+  Run 1: 396.967331756 seconds
+  Run 2: 396.499087252 seconds
+  Run 3: 397.138759535 seconds
+Done
 ```
